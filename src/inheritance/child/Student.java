@@ -6,13 +6,20 @@ public class Student extends Person {
     private String stdId;
 
     public Student() {
-        this.stdId = "C112160";
+        this("C112160");
+        System.out.println("student no-arg constructor");
+    }
+
+    public Student(String id) {
+        stdId = id;
+        System.out.println("student 1 param constructor");
     }
 
     public Student(String name, String tel, String address,
                    String stdId) {
         super(name, tel, address);
         this.stdId = stdId;
+        System.out.println("student param constructor");
     }
 
     public String getStdId() {
@@ -23,8 +30,14 @@ public class Student extends Person {
         this.stdId = stdId;
     }
 
-    public void display(){
-        System.out.println("stdID : " + stdId);
-        System.out.println(super.toString());
+    public void display() {
+        System.out.println("ID : " + stdId);
+        super.display();
+        super.age = 50;
+    }
+
+
+   static public int test() {
+        return 45;
     }
 }
