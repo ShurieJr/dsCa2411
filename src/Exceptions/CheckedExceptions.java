@@ -45,7 +45,7 @@ public class CheckedExceptions {
     }
 
     void checkId(String id , String id2){
-        if(id2 == id)
-            thr
+//        if(id2 == id)
+
     }
 }
